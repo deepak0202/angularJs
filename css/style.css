@@ -1,0 +1,26 @@
+.myclass {
+  background-color: lightblue;
+  width: 350px;
+}
+.sidenav {
+    height: 400px;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+     margin-top: 64px;
+     border-style: inset;
+}
+.mycard{
+  background-color: #4682B4;
+  width: 300px;
+  height: 550px;
+}
+.myfield
+{
+  background-color: #4682B4;  
+}

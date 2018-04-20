@@ -1,0 +1,46 @@
+<div  layout="column" >
+<section layout="row" flex>
+  <md-sidenav class="md-sidenav-left md-sidenav-right"   md-component-id="left"  md-disable-backdrop style=" margin-top: 64px;">
+    <!-- md-component-id="left" md-disable-backdrop md-whiteframe="4" -->
+<!-- left -->
+    <md-content layout-margin>
+      <fieldset>
+        <legend>manufacturer:</legend>
+        <div ng-repeat="x in manufacturer">
+          <md-checkbox ng-model="manufacturer"> 
+            {{x}}
+          </md-checkbox>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>os:</legend>
+        <div ng-repeat="x in os">
+          <md-checkbox ng-model="os">
+            {{x}}
+          </md-checkbox>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>storage:</legend>
+        <div ng-repeat="x in storage">
+          <md-checkbox ng-model="storage">
+            {{x}}
+          </md-checkbox>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>camera:</legend>
+        <div ng-repeat="x in camera">
+          <md-checkbox ng-model="camera">
+            {{x}}
+          </md-checkbox>
+        </div>
+      </fieldset>
+    </md-content>
+  </md-sidenav>
+  <md-content flex layout-padding>
+    <div layout="column" layout-align="top center">
+    </div>
+  </md-content>
+</section>
+</div>

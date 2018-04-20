@@ -1,0 +1,59 @@
+<div id="mySidenav" class="sidenav">
+  <!-- <md-content layout-margin class="myfield" ng-repeat="item in json" ng-click="toggle(json, selected)"> -->
+    <md-content layout-margin class="myfield" >
+    <fieldset >
+      <legend>manufacturer:</legend>
+      <!-- <div ng-repeat="item in json" class="standard" flex="50">
+             <label>
+               <input type="checkbox" ng-checked="exists(item, selected)"
+                      ng-click="toggle(item, selected)"/>
+               {{ item }}
+             </label>
+           </div> -->
+      <div ng-repeat="x in manufacturer" ng-click="toggle1(x, manufacturerArray1 )">
+        <md-checkbox ng-model="manufacturer">
+          <!-- <div ng-if="ischecked">
+            <span pushInArray({{x}})></span>
+          </div> -->
+          {{x}}
+        </md-checkbox>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>os:</legend>
+      <div ng-repeat="x in os" ng-click="toggle1(x,osArray1)">
+        <md-checkbox ng-model="os">
+          {{x}}
+        </md-checkbox>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>storage:</legend>
+      <div ng-repeat="x in storage" ng-click="toggle1(x,storageArray1)">
+        <md-checkbox ng-model="storage" >
+          {{x}}
+        </md-checkbox>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>camera:</legend>
+      <div ng-repeat="x in camera" ng-click="toggle1(x,cameraArray1)">
+        <md-checkbox ng-model="camera">
+          {{x}}
+        </md-checkbox>
+      </div>
+    </fieldset>
+  </md-content>
+</md-sidenav>
+<md-content flex layout-padding>
+  <div layout="column" layout-align="top center">
+  </div>
+  <div flex="100">
+    <h2 class="md-title">Selected Items</h2>
+    <code style="display: block; padding: 8px;">{{manufacturerArray1|json}}</code>
+      <code style="display: block; padding: 8px;">{{storageArray1|json}}</code>
+        <code style="display: block; padding: 8px;">{{osArray1|json}}</code>
+          <code style="display: block; padding: 8px;">{{cameraArray1|json}}</code>
+  </div>
+</md-content>
+</div>

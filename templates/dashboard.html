@@ -1,0 +1,28 @@
+<md-content layout="row" id="main">
+  <div layout="row" layout-wrap>
+    <!-- <md-card ng-repeat="x in json |myFormat:manufacturerArray1:storageArray1:osArray1:cameraArray1" class="mycard"> -->
+  <md-card ng-repeat="x in json | myFormat : manufacturerArray1 : storageArray1" class="mycard">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{x.name}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-title-media>
+        <div class="md-media-lg card-media" style=" align-content: center;">
+          <img src={{x.image.small}} alt="Mountain View">
+        </div>
+      </md-card-title-media>
+      <ul>
+        <li>mobil id :{{x.id}}</li>
+        <li>price :{{x.price}}</li>
+        <li>internal storage :{{x.specs.storage}}</li>
+        <li>os :{{x.specs.os}}</li>
+        <li>camera :{{x.specs.camera}}</li>
+        <li>rateing :{{x.rating}}</li>
+      </ul>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button>buy</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</md-content>

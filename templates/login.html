@@ -1,0 +1,33 @@
+<body>
+  <center>
+    <div layout="row" layout-align="center center">
+      <div>
+        <md-content class="md-padding" layout-xs="column" layout="row">
+          <div flex-xs flex-gt-xs="30" layout="column">
+            <md-card class="myclass">
+              <md-card-title>
+                <md-card-title-text>
+                  <span>
+                    <h1 style="background-color:DodgerBlue;">Login</h1>
+              </span>
+                </md-card-title-text>
+              </md-card-title>
+              <form name="myForm" ng-submit="logFunc()">
+                <md-input-container>
+                  <label>Email</label>
+                  <input type="email" name="myAddress" ng-model="text"> </input>
+                </md-input-container><br>
+                <md-input-container>
+                  <label>password</label>
+                  <input type="password" name="password" ng-model="pass"> </input>
+                </md-input-container><br>
+                <input type="submit" value="login"> </input>
+                {{display}}
+              </form>
+            </md-card>
+          </div>
+        </md-content>
+      </div>
+    </div>
+  </center>
+</body>
