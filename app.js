@@ -1,5 +1,4 @@
 var app = angular.module("myApp", ["ui.router", "ngMaterial"]);
-
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/login');
   $stateProvider

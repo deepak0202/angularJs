@@ -19,7 +19,7 @@ app.controller('loginController',function($scope,$state,$rootScope,JsonService)
     }
       else
       {
-        $scope.display = "enter valid password";
+        $scope.display = "enter valid password or email";
       }
    }
 });

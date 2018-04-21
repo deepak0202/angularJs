@@ -1,6 +1,5 @@
-app.directive('sidebar', function(){
+app.directive('sidebar', function() {
   return {
-    // templateUrl:'templates/sidebar.html'
-    templateUrl:'templates/sidenav.html'
+    templateUrl: 'templates/sidenav.html'
   };
 });

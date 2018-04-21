@@ -1,7 +1,6 @@
 <md-content layout="row" id="main">
   <div layout="row" layout-wrap>
-    <!-- <md-card ng-repeat="x in json |myFormat:manufacturerArray1:storageArray1:osArray1:cameraArray1" class="mycard"> -->
-  <md-card ng-repeat="x in json | myFormat : manufacturerArray1 : storageArray1" class="mycard">
+    <md-card ng-repeat="x in json | myFormat : manufacturerArray1 : storageArray1 : osArray1 : cameraArray1" class="mycard">
       <md-card-title>
         <md-card-title-text>
           <span class="md-headline">{{x.name}}</span>
@@ -21,6 +20,8 @@
         <li>rateing :{{x.rating}}</li>
       </ul>
       <md-card-actions layout="row" layout-align="end center">
+        <md-button class="md-primary " >view</md-button>
+        <!-- ng-click="showAdvanced($event,x)" -->
         <md-button>buy</md-button>
       </md-card-actions>
     </md-card>
