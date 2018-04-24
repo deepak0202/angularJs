@@ -1,4 +1,4 @@
-<md-content layout="row" id="main">
+<md-content layout="row" id="main" style="margin-top:64px">
   <div layout="row" layout-wrap>
     <md-card ng-repeat="x in json | myFormat : manufacturerArray1 : storageArray1 : osArray1 : cameraArray1" class="mycard">
       <md-card-title>
@@ -20,8 +20,8 @@
         <li>rateing :{{x.rating}}</li>
       </ul>
       <md-card-actions layout="row" layout-align="end center">
-        <md-button class="md-primary " >view</md-button>
-        <!-- ng-click="showAdvanced($event,x)" -->
+        <md-button class="md-primary " ng-click="showAdvanced($event,x)">view</md-button>
+
         <md-button>buy</md-button>
       </md-card-actions>
     </md-card>

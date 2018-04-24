@@ -47,7 +47,8 @@ app.controller('homeController', function($scope, $mdSidenav, $rootScope, $filte
     $scope.camera = $scope.cameraArray.filter(function(elem, index, self) {
       return index == self.indexOf(elem);
     })
-  });$mdDialog
+  });
+  // $mdDialog
 
   $rootScope.manufacturerArray1 = [];
   $rootScope.storageArray1 = [];
@@ -63,6 +64,39 @@ app.controller('homeController', function($scope, $mdSidenav, $rootScope, $filte
       list.push(json);
     }
   };
+
+  $scope.showAdvanced = function(ev,jsonObject) {
+		// $scope.ev = ev;
+		// $scope.jsonObject1 = jsonObject
+    //
+		//  $mdDialog.show({
+    //    controller: DialogController,
+		// 	templateUrl : 'templates/popup.html',
+		// 	scope : $scope,
+    //   targetEvent: ev,
+		// 	backdrop : false,
+		// 	animation : true
+
+    $mdDialog.show({
+      locals: {
+        data : jsonObject
+      },
+      controller: DialogController,
+      templateUrl: 'templates/popup.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose: true,
+      fullscreen: $scope.customFullscreen
+    });
+
+  }
+  function DialogController($scope, $mdDialog, data) {
+    $scope.data = data;
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+}
+
 });
 
   // $scope.showAdvanced = function(ev,jsonObject) {
@@ -89,17 +123,7 @@ app.controller('homeController', function($scope, $mdSidenav, $rootScope, $filte
   // };
 
 
-  // $scope.showAdvanced = function((ev,jsonObject) {
-	// 	$scope.ev = ev;
-	// 	$scope.jsonObject = jsonObject
-	// 	 $mdDialog.show({
-	// 		templateUrl : 'templates/popup.html',
-	// 		scope : $scope,
-  //     targetEvent: ev,
-	// 		backdrop : false,
-	// 		animation : true
-	// 	});
-	// }
+
 
 
 
